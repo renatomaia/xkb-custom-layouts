@@ -5866,6 +5866,14 @@
         </variant>
       </variantList>
     </layout>
+
+    <layout>
+      <configItem>
+        <name>nav</name>
+        <shortDescription>nav</shortDescription>
+        <description>Home Row Navigation</description>
+      </configItem>
+    </layout>
   </layoutList>
   <optionList>
     <group allowMultipleSelection="true">
