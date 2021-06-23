@@ -1,5 +1,5 @@
 default partial
-xkb_symbols "wasd" {
+xkb_symbols "nav" {
 
 //key <AE01> { [ VoidSymbol ] };  // 1
 //key <AE02> { [ VoidSymbol ] };  // 2
@@ -14,10 +14,10 @@ xkb_symbols "wasd" {
 //key <AE11> { [ VoidSymbol ] };  // -
 //key <AE12> { [ VoidSymbol ] };  // =
 
-	key <AD01> { [ Home       ] };  // Q
-	key <AD02> { [ Up         ] };  // W
-	key <AD03> { [ End        ] };  // E
-	key <AD04> { [ Prior      ] };  // R
+	key <AD01> { [ Prior      ] };  // Q
+	key <AD02> { [ Home       ] };  // W
+	key <AD03> { [ Up         ] };  // E
+	key <AD04> { [ End        ] };  // R
 	key <AD05> { [ VoidSymbol ] };  // T
 	key <AD06> { [ VoidSymbol ] };  // Y
 	key <AD07> { [ Insert     ] };  // U
@@ -27,10 +27,10 @@ xkb_symbols "wasd" {
 	key <AD11> { [ VoidSymbol ] };  // '
 	key <AD12> { [ VoidSymbol ] };  // [
 
-	key <AC01> { [ Left       ] };  // A
-	key <AC02> { [ Down       ] };  // S
-	key <AC03> { [ Right      ] };  // D
-	key <AC04> { [ Next       ] };  // F
+	key <AC01> { [ Next       ] };  // A
+	key <AC02> { [ Left       ] };  // S
+	key <AC03> { [ Down       ] };  // D
+	key <AC04> { [ Right      ] };  // F
 	key <AC05> { [ VoidSymbol ] };  // G
 	key <AC06> { [ BackSpace  ] };  // H
 	key <AC07> { [ Delete     ] };  // J
