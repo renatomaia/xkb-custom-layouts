@@ -1,4 +1,4 @@
-// JIS symbol mapping for Apple Aluminium Keyboard
+// JIS symbol mapping for Apple Aluminium
 // (Damien Ciabrini <damien.ciabrini@gmail.com>)
 //
 // The JIS version of the Aluminium Keyboard is made of
@@ -6,7 +6,7 @@
 //   PC98-like map for the kana part
 //   EISU and KANA keys found on other Apple keyboards
 
-partial default alphanumeric_keys
+default partial alphanumeric_keys
 xkb_symbols "usmac" {
     name[Group1]	= "Japan - Macintosh, US map";
     include "jp(common)"
@@ -24,12 +24,4 @@ xkb_symbols "mac" {
     include "jp(kana)"
 
     replace key <CAPS> { [ Caps_Lock ] };
-};
-
-partial alphanumeric_keys
-xkb_symbols "alujiskeys" {
-    // On JIS USB keyboard, EISU and KANA replace Hangul and Hanja
-    // see keycodes macintosh(jisevdev)
-    replace key <HJCV> { [ Hiragana_Katakana ] };
-    replace key <HNGL> { [ Eisu_toggle ] };
 };

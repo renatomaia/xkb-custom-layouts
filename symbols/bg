@@ -1,3 +1,5 @@
+// Keyboard layouts for Bulgaria.
+
 //////////////////////////////////////////////////////////////////////////
 // Copyright (C) 1999, 2000, 2007, 2009 by Anton Zinoviev <anton@lml.bas.bg>
 //
@@ -17,6 +19,9 @@
 
 // "bds" - the BDS keyboard layout compliant with the proposed
 //         Bulgarian state standard BDS 5237:2006
+
+// "bekl" - the „enhanced“ variant of the Bulgarian BDS keyboard,
+//          proposed in May 2020.
 
 // "phonetic" - the phonetic Bulgarian layout with the traditional position
 //              of the letters
@@ -41,10 +46,9 @@
 
 //////////////////////////////////////////////////////////////////////////
 
-// Describes Bulgarian keyboard "BDS" modified according to the
-// the new state standard BDS 5237:2006 and extended with symbols in
-// levels 3 and 4.
-default  partial alphanumeric_keys
+// Describes Bulgarian keyboard "BDS" according to the new state standard
+// BDS 5237:2006 and extended with symbols in levels 3 and 4.
+default partial alphanumeric_keys
 xkb_symbols "bds" {
 
   name[Group1]= "Bulgarian";
@@ -105,6 +109,22 @@ xkb_symbols "bds" {
 
   key <KPDL> { type[Group1] = "KEYPAD",             [ KP_Delete,         KP_Separator        ]};
 };
+
+// This is a slightly enhanced variant of the Bulgarian BDS keyboard,
+// proposed in May 2020 by a group of more than 500 linguists, teachers,
+// writers, translators, IT specialists, professors and many more.
+partial alphanumeric_keys
+xkb_symbols "bekl" {
+
+  include "bg(bds)"
+
+  name[Group1]= "Bulgarian (enhanced)";
+
+  key <AE02> {[ 2,                 question,          at,                at                  ]};
+  key <AD01> {[ comma,             U02BC,          rightsinglequotemark, leftsinglequotemark ]};
+  key <AB04> {[ U0463,             U0462                                                     ]};
+};
+
 
 // This is an improved variant of the traditional Bulgarian phonetic
 // keyboard.  Some unnecessary symbols in levels 1 and 2 are replaced

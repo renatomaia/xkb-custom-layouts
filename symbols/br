@@ -1,3 +1,5 @@
+// Keyboard layouts for Brazil.
+
 default
 xkb_symbols "abnt2" {
 
@@ -19,7 +21,7 @@ xkb_symbols "abnt2" {
 
     key <AD01> { [            q,              Q,         slash,           slash ] };
     key <AD02> { [            w,              W,      question,        question ] };
-    key <AD03> { [            e,              E,      EuroSign,        EuroSign ] };
+    key <AD03> { [            e,              E,        degree,          degree ] };
     key <AD04> { [            r,              R,    registered,      registered ] };
     key <AD11> { [   dead_acute,     dead_grave,         acute,           grave ] };
     key <AD12> { [  bracketleft,      braceleft,   ordfeminine,     dead_macron ] };
@@ -28,15 +30,13 @@ xkb_symbols "abnt2" {
     key <AC10> { [     ccedilla,       Ccedilla,    dead_acute,dead_doubleacute ] };
     key <AC11> { [   dead_tilde,dead_circumflex,    asciitilde,     asciicircum ] };
 
-    key <LSGT> { [    backslash,            bar,     masculine,      dead_breve ] };
+    key <LSGT> { [    backslash,            bar,    dead_caron,      dead_breve ] };
     key <AB03> { [            c,              C,     copyright,       copyright ] };
     key <AB07> { [            m,              M,            mu,              mu ] };
     key <AB10> { [    semicolon,          colon, dead_belowdot,   dead_abovedot ] };
 
     // The ABNT-2 keyboard has this special key:
     key <AB11> { [        slash,       question,        degree,    questiondown ] };
-
-    modifier_map Mod3   { Scroll_Lock };
 
     include "kpdl(comma)"
 
@@ -47,7 +47,7 @@ partial alphanumeric_keys
 xkb_symbols "nodeadkeys" {
 
     include "br(abnt2)"
-    name[Group1]="Portuguese (Brazil, eliminate dead keys)";
+    name[Group1]="Portuguese (Brazil, no dead keys)";
 
     key <AE06> { [            6,      diaeresis,       notsign,         notsign ] };
     key <AD11> { [   apostrophe,          grave                                 ] };
@@ -64,6 +64,7 @@ partial alphanumeric_keys
 xkb_symbols "thinkpad" {
 
     include "br(abnt2)"
+    name[Group1]="Portuguese (Brazil, IBM/Lenovo ThinkPad)";
 
     key <RCTL> { [        slash,       question,        degree,    questiondown ] };
 };
@@ -71,7 +72,7 @@ xkb_symbols "thinkpad" {
 
 partial alphanumeric_keys
 xkb_symbols "olpc" {
-
+    // #HW-SPECIFIC
     include "us(basic)"
     name[Group1]="Portuguese (Brazil)";
 
@@ -86,8 +87,8 @@ xkb_symbols "olpc" {
 
     key <AD03> { [            e,               E,      EuroSign                 ] };
     key <AD11> { [   dead_acute,      dead_grave,         acute,          grave ] };
-    key <AD12> { [  bracketleft,       braceleft,     0x10000AA                 ] };
-    key <BKSL> { [ bracketright,      braceright,     0x10000BA                 ] };
+    key <AD12> { [  bracketleft,       braceleft,   ordfeminine                 ] };
+    key <BKSL> { [ bracketright,      braceright,     masculine                 ] };
 
     key <AC10> { [     ccedilla,        Ccedilla                                ] };
     key <AC11> { [   dead_tilde, dead_circumflex                                ] };
@@ -100,6 +101,52 @@ xkb_symbols "olpc" {
     key <I219> { [        slash,        question,        degree, ISO_Next_Group ] };
 
     include "level3(ralt_switch)"
+};
+
+
+//
+// Phonetic Russian for ABNT2 standard layout.
+//
+// Evandro Bernardes    <evbernardes@gmail.com>    2023-02-14
+//
+partial alphanumeric_keys
+xkb_symbols "rus" {
+
+    include "br(abnt2)"
+    name[Group1]= "Russian (Brazil, phonetic)";
+
+    // 1st row
+    key <LatQ> { [ Cyrillic_softsign, Cyrillic_SOFTSIGN, Cyrillic_hardsign, Cyrillic_HARDSIGN  ] };
+    key <LatW> { [      Cyrillic_zhe,      Cyrillic_ZHE  ] };
+    key <LatE> { [       Cyrillic_ie,       Cyrillic_IE, Cyrillic_e,       Cyrillic_E  ] };
+    key <LatR> { [       Cyrillic_er,       Cyrillic_ER  ] };
+    key <LatT> { [       Cyrillic_te,       Cyrillic_TE] };
+    key <LatY> { [     Cyrillic_yeru,     Cyrillic_YERU  ] };
+    key <LatU> { [        Cyrillic_u,        Cyrillic_U, Cyrillic_yu,       Cyrillic_YU  ] };
+    key <LatI> { [        Cyrillic_i,        Cyrillic_I  ] };
+    key <LatO> { [        Cyrillic_o,        Cyrillic_O, Cyrillic_io,       Cyrillic_IO    ] };
+    key <LatP> { [       Cyrillic_pe,       Cyrillic_PE  ] };
+
+    // 2nd row
+    key <LatA> { [        Cyrillic_a,        Cyrillic_A, Cyrillic_ya,       Cyrillic_YA  ] };
+    key <LatS> { [       Cyrillic_es,       Cyrillic_ES  ] };
+    key <LatD> { [       Cyrillic_de,       Cyrillic_DE  ] };
+    key <LatF> { [       Cyrillic_ef,       Cyrillic_EF  ] };
+    key <LatG> { [      Cyrillic_ghe,      Cyrillic_GHE  ] };
+    key <LatH> { [       Cyrillic_ha,       Cyrillic_HA  ] };
+    key <LatJ> { [   Cyrillic_shorti,   Cyrillic_SHORTI  ] };
+    key <LatK> { [       Cyrillic_ka,       Cyrillic_KA  ] };
+    key <LatL> { [       Cyrillic_el,       Cyrillic_EL  ] };
+    key <AC10> { [      Cyrillic_che,      Cyrillic_CHE,    dead_acute,dead_doubleacute ] }; // ccedille
+
+    // 3rd row
+    key <LatZ> { [       Cyrillic_ze,       Cyrillic_ZE  ] };
+    key <LatX> { [      Cyrillic_sha,      Cyrillic_SHA,  Cyrillic_shcha,    Cyrillic_SHCHA ] };
+    key <LatC> { [      Cyrillic_tse,      Cyrillic_TSE  ] };
+    key <LatV> { [       Cyrillic_ve,       Cyrillic_VE  ] };
+    key <LatB> { [       Cyrillic_be,       Cyrillic_BE  ] };
+    key <LatN> { [       Cyrillic_en,       Cyrillic_EN  ] };
+    key <LatM> { [       Cyrillic_em,       Cyrillic_EM  ] };
 };
 
 
@@ -151,13 +198,13 @@ xkb_symbols "dvorak" {
     key <AC01> { [            a,               A,                   ae,               AE ] };
     key <AC02> { [            o,               O,                   oe,               OE ] };
     key <AC03> { [            e,               E,             EuroSign,         EuroSign ] };
-    key <AC04> { [            u,               U,               oslash,         Ooblique ] };
+    key <AC04> { [            u,               U,               oslash,           Oslash ] };
     key <AC05> { [            i,               I,             idotless,        Iabovedot ] };
     key <AC06> { [            d,               D,                  eth,              ETH ] };
     key <AC07> { [            h,               H,            leftarrow,        paragraph ] };
     key <AC08> { [            t,               T,           rightarrow,        trademark ] };
     key <AC09> { [            n,               N,                  eng,              ENG ] };
-    key <AC10> { [            s,               S,               ssharp,           ssharp ] };
+    key <AC10> { [            s,               S,               ssharp,            U1E9E ] };
     key <AC11> { [   dead_tilde, dead_circumflex,           asciitilde,      asciicircum ] };
     key <BKSL> { [        minus,      underscore,           0x01002015,       0x01000336 ] };
 
@@ -230,10 +277,10 @@ xkb_symbols "nativo" {
     key <AC02> { [            e,               E,             EuroSign,         EuroSign ] };
     key <AC03> { [            a,               A,                   ae,               AE ] };
     key <AC04> { [            o,               O,                   oe,               OE ] };
-    key <AC05> { [            u,               U,               oslash,         Ooblique ] };
+    key <AC05> { [            u,               U,               oslash,           Oslash ] };
     key <AC06> { [            m,               M,                   mu,               mu ] };
     key <AC07> { [            d,               D,                  eth,              ETH ] };
-    key <AC08> { [            s,               S,               ssharp,           ssharp ] };
+    key <AC08> { [            s,               S,               ssharp,            U1E9E ] };
     key <AC09> { [            r,               R,           registered,       registered ] };
     key <AC10> { [            n,               N,                  eng,              ENG ] };
     key <AC11> { [   dead_acute,      dead_grave,                acute,            grave ] };

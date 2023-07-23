@@ -1,8 +1,8 @@
-partial default xkb_types "default" {
+default partial xkb_types "default" {
 
     // A type that is used by Nokia devices and keyboards.
 
-    virtual_modifiers LevelThree;
+    virtual_modifiers  LevelThree;
 
     type "PC_FN_LEVEL2" {
 	modifiers = LevelThree;

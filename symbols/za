@@ -1,11 +1,9 @@
-// Based on the Latvian and GB keyboard maps.
+// Keyboard layout for South Africa.
 
-default  partial alphanumeric_keys modifier_keys
+// Dead keys and letters with diacritics on the upper levels.
+// Original author: Dwayne Bailey (dwayne@translate.org.za).
+default partial alphanumeric_keys modifier_keys
 xkb_symbols "basic" {
-
-    // Describes the differences between an en_US layout
-    // and a South African layout with dead keys.
-    // By Dwayne Bailey (dwayne@translate.org.za).
 
     include "latin"
 
@@ -34,6 +32,8 @@ xkb_symbols "basic" {
     key <AC10>  { [ semicolon,      colon, dead_diaeresis             ] };
     key <AC11>  { [apostrophe,   quotedbl,  dead_acute                ] };
 
+    key <AB04>  { [         v,          V, doublelowquotemark, leftsinglequotemark ] };
+    key <AB05>  { [         b,          B, rightdoublequotemark, leftdoublequotemark ] };
     key <AB06>  { [         n,          N,       U1e4b,         U1e4a ] };
     key <AB07>  { [         m,          M,       U1e45,         U1e44 ] };
     key <AB09>  { [    period,    greater, dead_abovedot              ] };
