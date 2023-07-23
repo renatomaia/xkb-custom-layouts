@@ -1,0 +1,94 @@
+default alphanumeric_keys modifier_keys
+xkb_symbols "basic" {
+
+    key.type[Group1] = "ONE_LEVEL";
+
+    key <TLDE> {[ Escape ]};  // ' "
+    key <AE01> {[ F1     ]};  // 1
+    key <AE02> {[ F2     ]};  // 2
+    key <AE03> {[ F3     ]};  // 3
+    key <AE04> {[ F4     ]};  // 4
+    key <AE05> {[ F5     ]};  // 5
+    key <AE06> {[ F6     ]};  // 6
+    key <AE07> {[ F7     ]};  // 7
+    key <AE08> {[ F8     ]};  // 8
+    key <AE09> {[ F9     ]};  // 9
+    key <AE10> {[ F10    ]};  // 0
+    key <AE11> {[ F11    ]};  // -
+    key <AE12> {[ F12    ]};  // =
+    key <BKSP> {[ Delete ]};  // Backspace
+
+    key <AD01> {[ Prior                ]};  // Q
+    key <AD02> {[ Home                 ]};  // W
+    key <AD03> {[ Up                   ]};  // E
+    key <AD04> {[ End                  ]};  // R
+    key <AD05> {[ VoidSymbol           ]};  // T
+    key <AD06> {[ VoidSymbol           ]};  // Y
+    key <AD07> {[ XF86AudioRaiseVolume ]};  // U
+    key <AD08> {[ VoidSymbol           ]};  // I
+    key <AD09> {[ VoidSymbol           ]};  // O
+    key <AD10> {[ VoidSymbol           ]};  // P
+    key <AD11> {[ VoidSymbol           ]};  // ' `
+    key <AD12> {[ VoidSymbol           ]};  // [
+
+    key <AC01> {[ Next                 ]};  // A
+    key <AC02> {[ Left                 ]};  // S
+    key <AC03> {[ Down                 ]};  // D
+    key <AC04> {[ Right                ]};  // F
+    key <AC05> {[ VoidSymbol           ]};  // G
+    key <AC06> {[ VoidSymbol           ]};  // H
+    key <AC07> {[ XF86AudioLowerVolume ]};  // J
+    key <AC08> {[ VoidSymbol           ]};  // K
+    key <AC09> {[ VoidSymbol           ]};  // L
+    key <AC10> {[ VoidSymbol           ]};  // Ç
+    key <AC11> {[ VoidSymbol           ]};  // ~
+    key <BKSL> {[ Return               ]};  // ]
+
+    key <LSGT> {[ Shift_L          ]};  // \
+    key <AB01> {[ BackSpace        ]};  // Z
+    key <AB02> {[ Delete           ]};  // X
+    key <AB03> {[ Insert           ]};  // C
+    key <AB04> {[ VoidSymbol       ]};  // V
+    key <AB05> {[ VoidSymbol       ]};  // B
+    key <AB06> {[ XF86AudioMicMute ]};  // N
+    key <AB07> {[ XF86AudioMute    ]};  // M
+    key <AB08> {[ XF86AudioPrev    ]};  // ,
+    key <AB09> {[ XF86AudioNext    ]};  // .
+    key <AB10> {[ XF86AudioPause   ]};  // ;
+  //key <AB11> {[ Shift_R          ]};  // /
+
+    key  <ESC> {[ XF86AudioMicMute ]};
+
+    key <FK01> {[ XF86AudioMedia ]};
+    key <FK02> {[ XF86AudioLowerVolume ]};
+    key <FK03> {[ XF86AudioRaiseVolume ]};
+    key <FK04> {[ XF86AudioMute ]};
+
+    key <FK05> {[ XF86AudioStop ]};
+    key <FK06> {[ XF86AudioPrev ]};
+    key <FK07> {[ XF86AudioPause ]};
+    key <FK08> {[ XF86AudioNext ]};
+
+    key <FK09> {[ KP_Divide ]};
+    key <FK10> {[ KP_Multiply ]};
+    key <FK11> {[ KP_Subtract ]};
+    key <FK12> {[ KP_Add ]};
+
+    key <PRSC> {[ KP_7 ]};
+    key <SCLK> {[ KP_8 ]};
+    key <PAUS> {[ KP_9 ]};
+
+    key  <INS> {[ KP_4 ]};
+    key <HOME> {[ KP_5 ]};
+    key <PGUP> {[ KP_6 ]};
+
+    key <DELE> {[ KP_1 ]};
+    key  <END> {[ KP_2 ]};
+    key <PGDN> {[ KP_3 ]};
+
+    key   <UP> {[ KP_0 ]};
+    key <DOWN> {[ KP_Decimal ]};
+    key <LEFT> {[ KP_Equal ]};
+    key <RGHT> {[ comma ]};
+
+};
